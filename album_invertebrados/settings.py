@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # APPS CREADAS
     'album.apps.AlbumConfig',
+    'users.apps.UsersConfig',
 
     # APPS INCLUIDAS POR DEFECTO
     'django.contrib.admin',
@@ -131,3 +132,5 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+LOGIN_URL = 'login'

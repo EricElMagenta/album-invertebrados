@@ -35,7 +35,7 @@ main {
     min-height: 85vh;
 }
 
-.welcome-container{
+.green-container {
     background-color: rgb(153, 223, 109);
     border-style: solid;
     border-color: rgb(82, 150, 57);
@@ -45,7 +45,7 @@ main {
     font-family: sans-serif;
 }
 
-.hint-container{
+.blue-container {
     background-color: rgb(158, 189, 225);
     border-style: solid;
     border-color: rgb(82, 124, 161);

@@ -1,10 +1,18 @@
 {% extends "album/base.html" %}
+
+{% block header %}
+    <nav>
+        <a href="#">Ingresar</a>
+        <a href="{% url 'register' %}">Registrarse</a>
+    </nav>
+{% endblock header %}
+
 {% block content %}
     <div class="main-content">
-        <div class="welcome-container">
+        <div class="green-container">
             <h1>¡BIENVENIDO AL ÁLBUM!</h1>
         </div>
-        <div class="hint-container">
+        <div class="blue-container">
             <h1>Ingresa o crea una cuenta</h1>
         </div>
     </div>
