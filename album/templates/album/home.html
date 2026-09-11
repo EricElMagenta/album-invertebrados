@@ -1,18 +1,20 @@
 {% extends "album/base.html" %}
 {% block header %}
     <nav>
-        <a href="{% url 'login' %}">Ingresar</a>
-        <a href="{% url 'register' %}">Registrarse</a>
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+        </form>
     </nav>
 {% endblock header %}
 
 {% block content %}
     <div class="main-content">
         <div class="green-container">
-            <h1>¡BIENVENIDO AL ÁLBUM!</h1>
+            <h1>¡BIENVENIDO {{ user }}!</h1>
         </div>
         <div class="blue-container">
-            <h1>Ingresa o crea una cuenta</h1>
+            <h1>Ver álbum.</h1>
         </div>
     </div>
 {% endblock content %}

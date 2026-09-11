@@ -1,0 +1,21 @@
+{% extends "album/base.html" %}
+{% block header %}
+    <nav>
+        <a href="{% url 'album-start' %}">Atrás</a>
+    </nav>
+{% endblock header %}
+
+{% block content %}
+    <form method="POST" class="green-container">
+        {% csrf_token %}
+        {{ form }}
+        <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">Login</button>
+        </div>        
+        <div>
+            <small>
+                ¿No tiene una cuenta?<a class="ml-2" href="{% url 'register' %}"> Ingresar aquí</a>
+            </small>
+        </div>
+    </form>
+{% endblock content %}

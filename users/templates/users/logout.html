@@ -2,17 +2,15 @@
 {% block header %}
     <nav>
         <a href="{% url 'login' %}">Ingresar</a>
-        <a href="{% url 'register' %}">Registrarse</a>
     </nav>
 {% endblock header %}
-
 {% block content %}
     <div class="main-content">
         <div class="green-container">
-            <h1>¡BIENVENIDO AL ÁLBUM!</h1>
+            <h1>Adios.</h1>
         </div>
         <div class="blue-container">
-            <h1>Ingresa o crea una cuenta</h1>
+            <a href="{% url 'album-start' %}" class="ml-2"><h1>Volver al inicio</h1></a>
         </div>
     </div>
 {% endblock content %}

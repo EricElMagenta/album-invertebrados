@@ -9,11 +9,20 @@ header {
     border-color: black;
 }
 
+header img {
+    border-radius: 50%;
+      height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
 nav {
     display: flex;
     justify-content: end;
     margin-right: 2rem;
 }
+
 
 header h1 {
     color: rgb(255, 255, 255);
@@ -35,6 +44,7 @@ main {
     min-height: 85vh;
 }
 
+
 .green-container {
     background-color: rgb(153, 223, 109);
     border-style: solid;
@@ -42,6 +52,7 @@ main {
     border-width: 0.3rem;
     padding: 1rem;
     border-radius: 20px;
+    text-align: center;
     font-family: sans-serif;
 }
 
@@ -55,4 +66,11 @@ main {
     margin-top: 10vh;
     text-align: center;
     font-family: sans-serif;
+}
+
+.blue-container > a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    margin-left: 1rem;
 }

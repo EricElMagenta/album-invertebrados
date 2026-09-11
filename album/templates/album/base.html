@@ -11,7 +11,10 @@
 </head>
 <body>
     <header>
-        {% block header %}{% endblock %}
+        {% if user.is_authenticated %}
+            <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+        {% endif %}
+            {% block header %}{% endblock %}
     </header>
     <main>
         {% block content %}{% endblock %}
