@@ -12,8 +12,8 @@ class Profile(models.Model):
 
 # Profile hereda de models.Model y usando "super" podemos usar métodos
 # de la clase padre
-    def save(self):
-        super().save()
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
 
 # Cambiando el tamaño de la imagen de perfil
         img = Image.open(self.image.path)
