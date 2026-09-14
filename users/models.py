@@ -8,7 +8,7 @@ class Profile(models.Model):
     image = models.ImageField(default='default.jpg', upload_to='profile_pics') # Recibe la url de una imagen y se guarda en el directorio "profile_pics"
 
     def __str__(self):
-        return f'{self.user.username} Profile'
+        return f'{self.user.username} Profile.'
 
 # Profile hereda de models.Model y usando "super" podemos usar métodos
 # de la clase padre
