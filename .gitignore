@@ -1,2 +1,5 @@
 venv/
 images/
+__pycache__/
+album/__pycache__/views.cpython-314.pyc
+album_invertebrados/__pycache__/urls.cpython-314.pyc
