@@ -1,0 +1,21 @@
+{% extends "album/base.html" %}
+{% block header %}
+    <nav>
+        <a href="{% url 'album-home' %}">Home</a>
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+        </form>
+    </nav>
+{% endblock header %}
+{% block content %}
+    <div class="content-section">
+        <div class="media">
+            <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+            <div class="media-body">
+                <h2 class="account-heading">Usuario: {{ user.username }}</h2>
+                <h3 class="text-secondary">Correo: {{ user.email }}</h3>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
