@@ -5,7 +5,8 @@ from . import views
 
 urlpatterns = [
     path('', views.start, name='album-start'),
-    path('home/', views.home, name='album-home')
+    path('home/', views.home, name='album-home'),
+    path('album/', views.album, name='album')
 ]
 
 if settings.DEBUG:

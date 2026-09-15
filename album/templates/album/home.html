@@ -12,9 +12,10 @@
     <div class="main-content">
         <div class="green-container">
             <h1>¡BIENVENIDO {{ user }}!</h1>
+            <h1>¡BIENVENIDO {{ user.album }}!</h1>
         </div>
         <div class="blue-container">
-            <h1>Ver álbum.</h1>
+            <a href="{% url 'album' %}"><h1>Ver álbum.</h1></a>
         </div>
     </div>
 {% endblock content %}

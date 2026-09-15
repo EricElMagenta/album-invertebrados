@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.apps import apps
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
@@ -15,3 +16,10 @@ def home(request):
     return render(request, 'album/home.html', context)
 
 
+@login_required
+def album(request):
+    invertebrates = apps.get_model('album', 'Invertebrate')
+    context = {
+        'invertebrates' : invertebrates.objects.all()
+    }
+    return render(request, 'album/album.html', context)
