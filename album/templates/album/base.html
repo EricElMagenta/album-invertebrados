@@ -12,7 +12,9 @@
 <body>
     <header>
         {% if user.is_authenticated %}
-            <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+            <a href="{% url 'album-profile' %}">
+                <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+            </a>
         {% endif %}
             {% block header %}{% endblock %}
     </header>

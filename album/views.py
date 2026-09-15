@@ -13,3 +13,5 @@ def home(request):
         'user' : request.user
     }
     return render(request, 'album/home.html', context)
+
+
