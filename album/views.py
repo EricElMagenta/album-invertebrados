@@ -19,7 +19,15 @@ def home(request):
 @login_required
 def album(request):
     invertebrates = apps.get_model('album', 'Invertebrate')
+    invertebrates_array = []
+    user = request.user
+
+    for invertebrate in invertebrates.objects.all():
+        if invertebrate.album.user.username == user.username:
+            invertebrates_array.append(invertebrate)
+
     context = {
-        'invertebrates' : invertebrates.objects.all()
+        'invertebrates' : invertebrates_array,
+        'user' : user
     }
     return render(request, 'album/album.html', context)

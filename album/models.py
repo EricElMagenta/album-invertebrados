@@ -13,6 +13,11 @@ class Album(models.Model):
 
 
 class Invertebrate(models.Model):
+
+
+    def __str__(self):
+        return f'{self.name}.'
+
     name = models.CharField(max_length=50)
     scientific_name = models.CharField(max_length=50)
     taxon_class = models.CharField(max_length=50)
