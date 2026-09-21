@@ -1,6 +1,7 @@
 {% extends "album/base.html" %}
 {% block header %}
-    <nav>
+<nav>
+        <a href="{% url 'add-invertebrate' %}">Agregar</a>
         <a href="{% url 'album-home' %}">Home</a>
         <form action="{% url 'logout' %}" method="post">
             {% csrf_token %}

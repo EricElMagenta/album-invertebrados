@@ -95,3 +95,7 @@ main {
 .card h4{
     text-align: center;
 }
+
+label {
+    display: block;
+}

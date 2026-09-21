@@ -1,8 +1,8 @@
 {% extends "album/base.html" %}
 {% block header %}
     <nav>
-        <a href="{% url 'album-home' %}">Home</a>
         <a href="{% url 'album' %}">Back</a>
+        <a href="{% url 'album-home' %}">Home</a>
         <form action="{% url 'logout' %}" method="post">
             {% csrf_token %}
             <button type="submit">Logout</button>
@@ -22,4 +22,8 @@
             <h4>Datos: {{ invertebrate.facts }}</h4>
         </div>
     </div>
+    <form action="{% url 'delete-invertebrate' invertebrate.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit">BORRAR</button>
+    </form>
 {% endblock content %}
