@@ -12,8 +12,10 @@
 {% block content %}
     {% for invertebrate in invertebrates %}
         <div class="card">
-            <img src="{{ invertebrate.image.url }}">
-            <h4><b>{{invertebrate.name}}</b></h4>
+            <a href="{% url 'invertebrate-info' invertebrate.id %}">
+                <img src="{{ invertebrate.image.url }}">
+                <h4><b>{{invertebrate.name}}</b></h4>
+            </a>
         </div>
         <!-- {{ invertebrate.image.url }} -->
     {% endfor %}

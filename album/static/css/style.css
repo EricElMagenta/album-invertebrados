@@ -44,6 +44,15 @@ main {
     min-height: 85vh;
 }
 
+.invertebrate-container{
+    background-color: rgb(158, 189, 225);
+    border-style: solid;
+    border-color: rgb(82, 124, 161);
+    border-width: 0.3rem;
+    padding: 1rem;
+    border-radius: 20px;
+    display: flex;
+}
 
 .green-container {
     background-color: rgb(153, 223, 109);

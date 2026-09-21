@@ -1,0 +1,25 @@
+{% extends "album/base.html" %}
+{% block header %}
+    <nav>
+        <a href="{% url 'album-home' %}">Home</a>
+        <a href="{% url 'album' %}">Back</a>
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+        </form>
+    </nav>
+{% endblock header %}
+{% block content %}
+    <div class="invertebrate-container">
+        <div class="image-container">
+            <img class="rounded-circle account-img" src="{{ invertebrate.image.url }}">
+        </div>
+        <div class="info-container">
+            <h4>Nombre común: {{ invertebrate.name }}</h4>
+            <h4>Nombre científico: {{ invertebrate.scientific_name }}</h4>
+            <h4>Clase: {{ invertebrate.taxon_class }}</h4>
+            <h4>Orden: {{ invertebrate.taxon_order }}</h4>
+            <h4>Datos: {{ invertebrate.facts }}</h4>
+        </div>
+    </div>
+{% endblock content %}
