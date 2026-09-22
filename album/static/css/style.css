@@ -118,6 +118,11 @@ main {
     color: rgb(0, 0, 0, 255);
 }
 
+.main-content a {
+    color: black;
+    text-decoration: none;
+}
+
 label {
     display: block;
 }
@@ -154,4 +159,50 @@ label {
 .media img {
     max-height: 250px;
     max-width: 250px; 
+}
+
+.invertebrate-form {
+    color: black;
+    background-color: rgb(153, 223, 109);
+    border-style: solid;
+    border-color: rgb(82, 150, 57);
+    border-width: 0.3rem;
+    padding: 1rem;
+    border-radius: 20px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+form input {
+    margin-bottom: 1rem;
+}
+
+form textarea{
+    margin-bottom: 1rem;
+}
+
+.invertebrate-form button {
+    background-color: rgb(249, 217, 33);
+    border: solid;
+    border-color: rgb(135, 131, 43);
+    border-radius: 15px;
+    padding: 1rem;
+    font-size: 2rem;
+    font-family: inherit;
+}
+
+.form-group button{
+    background-color: rgb(158, 189, 225);
+    border-style: solid;
+    border-color: rgb(82, 124, 161);
+    border-width: 0.3rem;
+    padding: 0.5rem;
+    border-radius: 20px;
+    font-size: 2rem;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
 }

@@ -7,10 +7,12 @@
 {% block content %}
     <div class="main-content">
         <div class="green-container">
-            <h1>Adios.</h1>
+            <h1>Adios</h1>
         </div>
-        <div class="blue-container">
-            <a href="{% url 'album-start' %}" class="ml-2"><h1>Volver al inicio</h1></a>
-        </div>
+        <a href="{% url 'album-start' %}" class="ml-2">
+            <div class="blue-container">
+                <h1>Volver al inicio</h1>
+            </div>
+        </a>
     </div>
 {% endblock content %}
