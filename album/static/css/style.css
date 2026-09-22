@@ -6,7 +6,9 @@ body {
 header {
     background-color: rgb(92, 90, 128);
     padding: 1rem;
-    border-color: black;
+    border: solid;
+    border-color: rgb(78, 57, 112);
+    border-width: 0.3;
 }
 
 header img {
@@ -19,10 +21,19 @@ header img {
 
 nav {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    align-items: center;
     margin-right: 2rem;
 }
 
+.nav-content {
+    display: flex;
+}
+
+.nav-not-logged{
+    display: flex;
+    justify-content: end;
+}
 
 header h1 {
     color: rgb(255, 255, 255);
@@ -34,6 +45,15 @@ nav a {
     text-decoration: none;
     font-size: 30px;
     margin-left: 1rem;
+}
+
+.logout-button {
+    border: none;
+    color:white;
+    background: none;
+    font-family: inherit;
+    font-size: 30px;
+    padding-left: 1rem;
 }
 
 /* MAIN */
@@ -55,6 +75,7 @@ main {
 }
 
 .green-container {
+    color: black;
     background-color: rgb(153, 223, 109);
     border-style: solid;
     border-color: rgb(82, 150, 57);
@@ -78,7 +99,7 @@ main {
 }
 
 .blue-container > a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 30px;
     margin-left: 1rem;
@@ -94,8 +115,43 @@ main {
 
 .card h4{
     text-align: center;
+    color: rgb(0, 0, 0, 255);
 }
 
 label {
     display: block;
+}
+
+
+.info-main-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-container{
+    margin-left: 5rem;
+    text-align: start;
+    font-family: sans-serif;
+}
+
+.invertebrate-info-image img{
+    max-height: 250px;
+    max-width: 250px;
+}
+
+.delete-invertebrate {
+    margin-top: 2rem;
+    background-color: rgb(246, 131, 131);
+    border: solid;
+    border-color: red;
+    border-radius: 15px;
+    padding: 1rem;
+    font-size: 2rem;
+    font-family: inherit;
+}
+
+.media img {
+    max-height: 250px;
+    max-width: 250px; 
 }

@@ -1,29 +1,31 @@
 {% extends "album/base.html" %}
 {% block header %}
-    <nav>
+    <div class="nav-content">
         <a href="{% url 'album' %}">Back</a>
         <a href="{% url 'album-home' %}">Home</a>
         <form action="{% url 'logout' %}" method="post">
             {% csrf_token %}
-            <button type="submit">Logout</button>
+            <button class="logout-button" type="submit">Logout</button>
         </form>
-    </nav>
+    </div>
 {% endblock header %}
 {% block content %}
-    <div class="invertebrate-container">
-        <div class="image-container">
-            <img class="rounded-circle account-img" src="{{ invertebrate.image.url }}">
+    <div class="info-main-content">
+        <div class="invertebrate-container">
+            <div class="invertebrate-info-image">
+                <img src="{{ invertebrate.image.url }}">
+            </div>
+            <div class="info-container">
+                <h4>Nombre común: {{ invertebrate.name }}</h4>
+                <h4>Nombre científico: {{ invertebrate.scientific_name }}</h4>
+                <h4>Clase: {{ invertebrate.taxon_class }}</h4>
+                <h4>Orden: {{ invertebrate.taxon_order }}</h4>
+                <h4>Datos: {{ invertebrate.facts }}</h4>
+            </div>
         </div>
-        <div class="info-container">
-            <h4>Nombre común: {{ invertebrate.name }}</h4>
-            <h4>Nombre científico: {{ invertebrate.scientific_name }}</h4>
-            <h4>Clase: {{ invertebrate.taxon_class }}</h4>
-            <h4>Orden: {{ invertebrate.taxon_order }}</h4>
-            <h4>Datos: {{ invertebrate.facts }}</h4>
-        </div>
+        <form action="{% url 'delete-invertebrate' invertebrate.id %}" method="post">
+            {% csrf_token %}
+            <button class="delete-invertebrate" type="submit">BORRAR</button>
+        </form>
     </div>
-    <form action="{% url 'delete-invertebrate' invertebrate.id %}" method="post">
-        {% csrf_token %}
-        <button type="submit">BORRAR</button>
-    </form>
 {% endblock content %}

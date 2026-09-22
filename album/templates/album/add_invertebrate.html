@@ -1,13 +1,13 @@
 {% extends "album/base.html" %}
 {% block header %}
-    <nav>
+    <div class="nav-content">
         <a href="{% url 'album' %}">Back</a>
         <a href="{% url 'album-home' %}">Home</a>
         <form action="{% url 'logout' %}" method="post">
             {% csrf_token %}
-            <button type="submit">Logout</button>
+            <button class="logout-button" type="submit">Logout</button>
         </form>
-    </nav>
+    </div>
 {% endblock header %}
 {% block content %}
 <form class="invertebrate-form" method="post" enctype="multipart/form-data">

@@ -1,11 +1,9 @@
 {% extends "album/base.html" %}
 {% block header %}
-    <nav>
-        <form action="{% url 'logout' %}" method="post">
-            {% csrf_token %}
-            <button type="submit">Logout</button>
-        </form>
-    </nav>
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button class="logout-button" type="submit">Logout</button>
+    </form>
 {% endblock header %}
 
 {% block content %}
